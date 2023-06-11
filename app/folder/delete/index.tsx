@@ -37,6 +37,7 @@ export default function DeleteFolderScreen() {
   //   ]
   // };
 
+
   const [selectedIds, setSelectedIds] = useState<Number[]>([]);
 
   useEffect(() => {
@@ -89,6 +90,11 @@ export default function DeleteFolderScreen() {
       />
       {/* Use a light status bar on iOS to account for the black space above the modal */}
       <StatusBar style={Platform.OS === "ios" ? "light" : "auto"} />
+      <View style={styles.sumDelete}>
+        <Text style={styles.sumDeleteText}>
+          Selected : {selectedIds.length}
+        </Text>
+      </View>
     </View>
   );
 }
@@ -114,6 +120,8 @@ const styles = StyleSheet.create({
   },
   folderList: {
     width: "100%",
+    overflow: "hidden",
+    overflowY: "scroll",
   },
   folder: {
     width: "100%",
@@ -128,5 +136,20 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
     backgroundColor: Colors.light.deleteSelected,
     // color: "white",
+  },
+
+  sumDelete: {
+    width: "100%",
+    height: "30%",
+    backgroundColor: Colors.light.deleteSummary,
+    justifyContent: "center",
+    alignItems: "center",
+    border: "1px solid black",
+    borderTopLeftRadius: 50,
+    borderTopRightRadius: 50,
+  },
+  sumDeleteText: {
+    fontFamily: "SpaceMono",
+    fontSize: 25,
   },
 });

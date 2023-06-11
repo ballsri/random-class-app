@@ -6,7 +6,7 @@ import {
 } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack, Link } from "expo-router";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Pressable, useColorScheme } from "react-native";
 import Colors from "../constants/Colors";
 import AntDesign from "@expo/vector-icons/AntDesign";
@@ -45,7 +45,7 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
-
+  const [amountDelete, setAmountDelete] = useState<Number>(0);
   return (
     <>
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
@@ -66,7 +66,7 @@ function RootLayoutNav() {
             name="folder/delete/index"
             options={{
               presentation: "modal",
-              title: "Delete Folder",
+              title: "Select to delete folder",
               headerTitleAlign: "center",
               headerStyle: {
                 backgroundColor: Colors[colorScheme ?? "light"].tint,

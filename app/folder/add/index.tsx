@@ -50,7 +50,7 @@ export default function AddFolderScreen() {
         <Text style={styles.inputName}>Folder's Name : </Text>
         <TextInput style={styles.input} onChangeText={setname} value={name} />
       </View>
-      <View style={styles.button}>
+      <View style={styles.buttonContainer}>
         <Button
           title="Add Folder"
           onPress={() => {
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     height: 1,
     width: "100%",
   },
-  button: {
+  buttonContainer: {
     alignItems: "center",
     padding: 10,
   },
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
   inputName: {
     fontSize: 25,
-    fontFamily: "arial",
+    fontFamily: "SpaceMono",
     fontWeight: "100",
   },
 

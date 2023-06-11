@@ -1,4 +1,4 @@
-const tintColorLight = '#2f95dc';
+const tintColorLight = "#85C1E9";
 const tintColorDark = '#fff';
 
 export default {
@@ -8,8 +8,9 @@ export default {
     tint: tintColorLight,
     tabIconDefault: "#ccc",
     tabIconSelected: tintColorLight,
-    addFolder: "#2f95dc",
-    deleteSelected: "#F9F2A7",
+    addFolder: "#85C1E9",
+    deleteSelected: "#FCF3CF",
+    deleteSummary: "#D4E6F1",
     separatorDark: "#888888",
     separatorDarker: "#BFBFBF",
   },
@@ -19,8 +20,9 @@ export default {
     tint: tintColorDark,
     tabIconDefault: "#ccc",
     tabIconSelected: tintColorDark,
-    addFolder: "#2f95dc",
+    addFolder: "#85C1E9",
     deleteSelected: "#F9F2A7",
+    deleteSummary: "#D4E6F1",
     separatorDark: "#888888",
     separatorDarker: "#BFBFBF",
   },
