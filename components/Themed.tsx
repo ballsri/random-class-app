@@ -91,6 +91,7 @@ export function Item({
 }
 
 export type FolderItem = {
+  id: number;
   img: string;
   name: string;
 };

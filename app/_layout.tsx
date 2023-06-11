@@ -45,7 +45,6 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
-  const [amountDelete, setAmountDelete] = useState<Number>(0);
   return (
     <>
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
@@ -82,7 +81,7 @@ function RootLayoutNav() {
               ),
             }}
           />
-          <Stack.Screen name="folder/[id]" />
+          
         </Stack>
       </ThemeProvider>
     </>
