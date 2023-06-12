@@ -81,7 +81,12 @@ function RootLayoutNav() {
               ),
             }}
           />
-          
+          <Stack.Screen
+            name="folder/[id]"
+            options={{
+              headerShown: false,
+            }}
+          />
         </Stack>
       </ThemeProvider>
     </>

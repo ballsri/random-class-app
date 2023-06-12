@@ -34,7 +34,7 @@ const data: FolderData = {
 };
 
 const windowWidth = Dimensions.get("window").width;
-var numColumns;
+var numColumns: number;
 if (windowWidth > 700) {
     numColumns = 3;
 } else {
